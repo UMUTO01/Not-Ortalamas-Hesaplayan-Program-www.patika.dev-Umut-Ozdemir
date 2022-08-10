@@ -1,0 +1,38 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+	System.out.print("Lütfen Sınav Notlarını Teker Teker Giriniz, İlk olarak Fizik:");
+	int a = scan.nextInt();
+	System.out.print("Kimya");
+	int b= scan.nextInt();
+	System.out.print("Turkce");
+	int c= scan.nextInt();
+	System.out.print("Tarih");
+	int d =scan.nextInt();
+	System.out.print("Muzik");
+	int e = scan.nextInt();
+	GradeCalculator(a,b,c,d,e);
+    }
+    public static void GradeCalculator(int Physic,int Chen, int Grammer, int History, int Music){
+        int Division = (Physic+ Chen+ Grammer+ History + Music) / 5;
+        int PlusDivision;
+        if(Division > 60){
+            PlusDivision = 1;
+        }
+        else{
+            PlusDivision = 2;
+        }
+
+        switch (PlusDivision){
+            case (1):
+                System.out.println("Sınıf Geçti");
+            case (2):
+                System.out.println("Sınıfta Kaldı");
+
+        }
+    }
+}
